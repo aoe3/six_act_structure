@@ -114,7 +114,7 @@ function App() {
     return acts
       .map((act) => {
         const fieldsText = act.fields
-          .map((field) => `${field.label} ${formData[field.id] || "[...]"}`)
+          .map((field) => `${field.label}: ${formData[field.id] || "[...]"}`)
           .join("\n");
 
         return `${act.title}\n${fieldsText}`;
